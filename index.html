@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+		<tr>
+			<td colspan="5"><input id="display" type="text"></td>
+		</tr>
+		<tr>
+			<td><button onclick="seven()" id="seven" class="button">7</button></td>
+			<td><button onclick="eight()" id="eight" class="button">8</button></td>
+			<td><button onclick="nine()" id="nine" class="button">9</button></td>
+			<td><button onclick="back()" id="back" class="button"> C</button></td>
+			<td><button onclick="erase()" id="erase" class="button">AC</button></td>
+			
+		</tr>
+		<tr>
+			<td><button onclick="four()" id="four" class="button">4</button></td>
+			<td><button onclick="five()" id="five" class="button">5</button></td>
+			<td><button onclick="six()" id="six" class="button">6</button></td>
+			<td><button onclick="multiply()" id="multiply" class="button"> *</button></td>
+			<td><button onclick="expo()" id="expo" class="button"> ^</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="one()" id="one" class="button">1</button></td>
+			<td><button onclick="two()" id="two" class="button">2</button></td>
+			<td><button onclick="three()" id="three" class="button">3</button></td>	
+			<td><button onclick="subtract()" id="subtract" class="button"> -</button></td>
+			<td><button onclick="divide()" id="divide" class="button"> /</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="dot()" id="dot" class="button">.</button></td>
+			<td><button onclick="zero()" id="zero" class="button">0</button></td>
+			<td><button onclick="equals()" id="equals" class="button">=</button></td>
+			<td><button onclick="add()" id="add" class="button">+</button></td>
+			<td><button onclick="modulo()" id="modulo" class="button"> %</button></td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script>
+var first = "":
+var second = "";
+var equation = "";
+
+
+function equals(){
+	n1 = document.getElementById("display").value;
+	if (equation == "+"){
+		document.getElementById("display").value = parseInt(first) + parseInt(second);
+		equation = "";
+		}
+	if (equation == "-"){
+		document.getElementById("display").value = parseInt(second) - parseInt(first);
+		equation = "";
+		}
+	if (equation == "*"){
+		document.getElementById("display").value = parseInt(second) * parseInt(first);
+		equation = "";
+		}
+	if (equation == "/"){
+		document.getElementById("display").value = parseInt(second) / parseInt(first);
+		equation = "";		
+		}
+	if (equation == "%"){
+		document.getElementById("display").value = parseInt(second) % parseInt(first);
+		equation = "";		
+		}
+	if (equation == "^"){
+		document.getElementById("display").value = parseInt(second) ^ parseInt(first);
+		equation = "";		
+		}
+	}
+
+
+function one(){
+	document.getElementById("display").value += "1";
+	}
+function two(){
+	document.getElementById("display").value += "2";
+	}
+function three(){
+	document.getElementById("display").value += "3";
+	}
+function four(){
+	document.getElementById("display").value += "4";
+	}
+function five(){
+	document.getElementById("display").value += "5";
+	}
+function six(){
+	document.getElementById("display").value += "6";
+	}
+function seven(){
+	document.getElementById("display").value += "7";
+	}
+function eight(){
+	document.getElementById("display").value += "8";
+	}
+function nine(){
+	document.getElementById("display").value += "9";
+	}
+function zero(){
+	document.getElementById("display").value += "0";
+	}
+function dot(){
+	document.getElementById("display").value += ".";
+	}
+</script>
